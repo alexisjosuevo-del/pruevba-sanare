@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sanaré · Cotizador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <img src="https://raw.githubusercontent.com/alexisjosuevo-del/Cotizador-Sanare-Sep/refs/heads/main/logo.png" alt="Sanaré" class="logo">
+    <h1>Cotizador Sanaré</h1>
+    <span id="folioBadge" class="badge">Folio: —</span>
+  </header>
+
+  <main id="comprobante" class="card">
+    <section class="grid2">
+      <div>
+        <label>Paciente</label>
+        <input id="paciente" placeholder="Nombre del paciente">
+      </div>
+      <div>
+        <label>Médico</label>
+        <input id="medico" placeholder="Nombre del médico">
+      </div>
+      <div>
+        <label>Aseguradora</label>
+        <input id="aseguradora" placeholder="Pago de bolsillo">
+      </div>
+      <div>
+        <label>KAM</label>
+        <input id="kam" placeholder="Nombre KAM">
+      </div>
+      <div>
+        <label>KAM Email</label>
+        <input id="kamEmail" placeholder="kam@empresa.com">
+      </div>
+      <div>
+        <label>Realizado por</label>
+        <input id="realizadoPor" placeholder="Corporativo">
+      </div>
+      <div>
+        <label>Realizado por (email)</label>
+        <input id="realizadoPorEmail" placeholder="usuario@empresa.com">
+      </div>
+      <div>
+        <label>Fecha de emisión</label>
+        <input id="fechaEmision" type="date">
+      </div>
+      <div>
+        <label>Válido hasta</label>
+        <input id="fechaValidez" type="date">
+      </div>
+      <div>
+        <label>Fecha de programación</label>
+        <input id="fecha" type="date">
+      </div>
+      <div>
+        <label>Dirección / Sede</label>
+        <input id="direccion" placeholder="Sede Narvarte">
+      </div>
+      <div>
+        <label>Teléfono</label>
+        <input id="telefono" placeholder="55 5255 8403">
+      </div>
+      <div class="colspan2">
+        <label>Esquema / Tratamiento</label>
+        <input id="esquema" placeholder="Ej. OXALIPLATINO">
+      </div>
+      <div class="colspan2">
+        <label>DX / Comentarios</label>
+        <textarea id="dx" rows="2" placeholder="Diagnóstico, notas…"></textarea>
+      </div>
+    </section>
+
+    <section class="tables">
+      <h2>Medicamentos</h2>
+      <table id="tablaMedicamentos">
+        <thead><tr><th>Descripción</th><th>Código</th><th>Cantidad</th><th>P. Unitario</th><th>Importe</th></tr></thead>
+        <tbody>
+          <!-- Ejemplo de fila (borra y llena dinámicamente en tu app) -->
+          <tr><td>Ejemplo MANITOL 20% 250ml</td><td>EAN-0001</td><td>1</td><td>1200</td><td>1200</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Servicios</h2>
+      <table id="tablaServicios">
+        <thead><tr><th>Descripción</th><th>Cantidad</th><th>P. Unitario</th><th>Desc. %</th><th>Importe</th></tr></thead>
+        <tbody>
+          <!-- Ejemplo de fila (borra y llena dinámicamente en tu app) -->
+          <tr><td>HONORARIO MÉDICO</td><td>1</td><td>2000</td><td>0</td><td>2000</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="totales">
+      <div><span>Subtotal (medicamentos)</span><strong id="subtotalMeds">1200</strong></div>
+      <div><span>Subtotal (servicios)</span><strong id="subtotalServ">2000</strong></div>
+      <div><span>IVA servicios (16%)</span><strong id="ivaServicios">320</strong></div>
+      <div class="total"><span>Total</span><strong id="totalGeneral">3520</strong></div>
+    </section>
+  </main>
+
+  <footer class="actions">
+    <button id="btnPDF">Generar PDF, subir y registrar</button>
+  </footer>
+
+  <!-- html2pdf CDN (usa internet al correr) -->
+  <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

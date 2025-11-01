@@ -1,0 +1,20 @@
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#faf8f6;color:#0a497b}
+.topbar{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-bottom:1px solid #e7dfd6;background:#fff}
+.logo{height:36px;object-fit:contain}
+h1{font-size:1.2rem;margin:0;font-weight:600}
+.badge{margin-left:auto;border:1px solid #c8b7a4;border-radius:8px;padding:.25rem .5rem;background:#fff8f3;color:#6b4e3d;font-size:.85rem}
+.card{max-width:1000px;margin:1rem auto;padding:1rem;background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:0 6px 20px rgba(10,73,123,.08)}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+.grid2 .colspan2{grid-column:1/-1}
+label{display:block;font-size:.8rem;color:#6b4e3d;margin-bottom:.25rem}
+input,textarea{width:100%;padding:.55rem .6rem;border:1px solid #e7dfd6;border-radius:10px;background:#fff}
+h2{margin:1.25rem 0 .5rem 0;color:#0a497b;font-size:1rem}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eee}
+th,td{padding:.5rem;border-bottom:1px solid #f1ece6;font-size:.9rem}
+thead th{background:#f7f3ef;text-align:left}
+.totales{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem;margin-top:1rem}
+.totales div{display:flex;justify-content:space-between;padding:.5rem .75rem;border:1px dashed #e7dfd6;border-radius:12px;background:#fff}
+.totales .total{grid-column:1/-1;background:#0a497b;color:#fff;border:0}
+.actions{display:flex;justify-content:center;padding:1rem}
+button#btnPDF{background:#0a497b;color:#fff;border:0;border-radius:14px;padding:.8rem 1.2rem;font-weight:600;cursor:pointer;box-shadow:0 6px 16px rgba(10,73,123,.22)}
+button#btnPDF:hover{filter:brightness(1.05)}
