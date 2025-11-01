@@ -1,20 +1,37 @@
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#faf8f6;color:#0a497b}
-.topbar{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-bottom:1px solid #e7dfd6;background:#fff}
-.logo{height:36px;object-fit:contain}
-h1{font-size:1.2rem;margin:0;font-weight:600}
-.badge{margin-left:auto;border:1px solid #c8b7a4;border-radius:8px;padding:.25rem .5rem;background:#fff8f3;color:#6b4e3d;font-size:.85rem}
-.card{max-width:1000px;margin:1rem auto;padding:1rem;background:#fff;border:1px solid #eee;border-radius:16px;box-shadow:0 6px 20px rgba(10,73,123,.08)}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
-.grid2 .colspan2{grid-column:1/-1}
-label{display:block;font-size:.8rem;color:#6b4e3d;margin-bottom:.25rem}
-input,textarea{width:100%;padding:.55rem .6rem;border:1px solid #e7dfd6;border-radius:10px;background:#fff}
-h2{margin:1.25rem 0 .5rem 0;color:#0a497b;font-size:1rem}
-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eee}
-th,td{padding:.5rem;border-bottom:1px solid #f1ece6;font-size:.9rem}
-thead th{background:#f7f3ef;text-align:left}
-.totales{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem;margin-top:1rem}
-.totales div{display:flex;justify-content:space-between;padding:.5rem .75rem;border:1px dashed #e7dfd6;border-radius:12px;background:#fff}
-.totales .total{grid-column:1/-1;background:#0a497b;color:#fff;border:0}
-.actions{display:flex;justify-content:center;padding:1rem}
-button#btnPDF{background:#0a497b;color:#fff;border:0;border-radius:14px;padding:.8rem 1.2rem;font-weight:600;cursor:pointer;box-shadow:0 6px 16px rgba(10,73,123,.22)}
-button#btnPDF:hover{filter:brightness(1.05)}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#faf7f5;color:#2d2a29;margin:0}
+main{max-width:980px;margin:20px auto;background:#fff;padding:20px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.header{display:flex;gap:16px;border-bottom:2px solid #e6ddd8;padding-bottom:12px;margin-bottom:16px}
+.logo{height:80px}
+.empresa h1{margin:6px 0 8px 0;font-size:22px;color:#7a6158;letter-spacing:.5px}
+.empresa label{font-size:12px;color:#6f6a67}
+.empresa select{width:100%;padding:8px;border:1px solid #d8cdc7;border-radius:10px;background:#fffaf8}
+.tel{margin-top:6px;font-size:12px;color:#7a6158}
+.datos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 18px}
+.datos .full{grid-column:1/-1}
+.datos input,.datos textarea,select{width:100%;padding:10px;border:1px solid #d8cdc7;border-radius:10px;background:#fffaf8}
+h2{margin:16px 0 8px;color:#7a6158}
+.fila{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+button{background:#7a6158;color:#fff;border:none;padding:10px 14px;border-radius:10px;cursor:pointer}
+button:hover{opacity:.9}
+table{width:100%;border-collapse:collapse;background:#fffbf9;border-radius:12px;overflow:hidden}
+th,td{border:1px solid #eadfd9;padding:8px;text-align:center}
+.totales .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px}
+.totales .grid>div{background:#fff7f3;border:1px solid #eadfd9;border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center}
+.totales .total{grid-column:3/4;background:#e9d9d2}
+
+#buscarMed { flex:1; padding:8px; border:1px solid #d8cdc7; border-radius:8px; }
+#ordenMed { padding:8px; border:1px solid #d8cdc7; border-radius:8px; }
+
+.extras { margin-left:20px; display:flex; flex-direction:column; gap:6px; font-size:14px; }
+.extras label { font-weight:bold; margin-top:4px; }
+.extras input { padding:4px; border:1px solid #ccc; border-radius:6px; }
+
+
+.disclaimer {
+  font-size: 10px;
+  color: #6b7280;
+  text-align: center;
+  margin: 12px 0;
+  line-height: 1.3;
+}
